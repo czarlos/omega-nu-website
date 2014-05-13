@@ -128,7 +128,7 @@
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="duke" class="thumbnail team">
+                    <a href="#" id="duke_medical" class="thumbnail team">
                         <img src="img/profile/seniors/kevin_oh.jpg" alt="...">
                     </a>
                 </div>
@@ -156,7 +156,7 @@
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="duke" class="thumbnail team">
+                    <a href="#" id="engineering_health" class="thumbnail team">
                         <img src="img/profile/seniors/benson.jpg" alt="...">
                     </a>
                 </div>
@@ -178,7 +178,13 @@
                         <img src="img/profile/seniors/leeviana.jpg" alt="...">
                     </a>
                 </div>
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" id="internnection" class="thumbnail team">
+                        <img src="img/profile/seniors/chris.jpg" alt="...">
+                    </a>
+                </div>
             </div>
+
     </section>
 
     <section id="projects-page" class="content-section text-center">
@@ -337,7 +343,7 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <p>Omega Nu, legit coders.</p>
+                <p>info@omeganu.us</p>
                 <ul class="list-inline banner-social-buttons">
                     <li><a href="https://twitter.com/SBootstrap" class="btn btn-social-media"><i class="fa fa-twitter fa-fw"></i></a>
                     </li>
@@ -366,8 +372,8 @@
             content: {
                 text: function(api) {
                     console.log($(this).attr("id"));
-                    var name = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>" + 
-                    "<p id="+"blurb"+">JSON blurb about <br> this person</p>";
+                    var name = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
+                    //+ "<p id="+"blurb"+">JSON blurb about <br> this person</p>";
                     return name;
                 }
             },
