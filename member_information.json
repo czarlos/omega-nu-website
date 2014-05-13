@@ -1,0 +1,8 @@
+{
+	"carlos": {
+		"company": "Intel",
+		"company-logo": "img/companies/intel.png",
+		"bio": "I like money",
+		"skills": ["C++", "Ruby on Rails", "OpenCL"]
+	}
+}
