@@ -368,6 +368,10 @@
     <script type="text/javascript" src="js/jquery.qtip.min.js"></script>
 
     <script type="text/javascript">
+        $.getJSON( "http://people.duke.edu/~cer26/OmegaNu/member_information.json", function( json ) {
+            console.log(json.carlos.company);
+        });
+        
         $('.team').qtip({ // Grab some elements to apply the tooltip to
             content: {
                 text: function(api) {
