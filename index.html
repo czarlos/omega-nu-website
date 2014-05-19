@@ -420,6 +420,16 @@
             },
             style: {
                 classes: 'qtip-tipped qtip-rounded qtip-shadow'
+            },
+            show: {
+                effect: function() {
+                    $(this).slideDown();
+                }
+            },
+            hide: {
+                effect: function() {
+                    $(this).slideUp();
+                }
             }
         })
     </script>
