@@ -368,17 +368,34 @@
     <script type="text/javascript" src="js/jquery.qtip.min.js"></script>
 
     <script type="text/javascript">
-        $.getJSON( "http://people.duke.edu/~cer26/OmegaNu/member_information.json", function( json ) {
-            console.log(json.carlos.company);
-        });
-        
+
         $('.team').qtip({ // Grab some elements to apply the tooltip to
             content: {
-                text: function(api) {
-                    console.log($(this).attr("id"));
-                    var name = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
-                    //+ "<p id="+"blurb"+">JSON blurb about <br> this person</p>";
-                    return name;
+                text: function(event, api) {
+                    var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
+                    var attrID = $(this).attr("id");
+
+                    // $.getJSON( "member_information.json", function( json ) {
+                    // })
+
+                    $.ajax({
+                        url: 'member_information.json', // URL to the JSON file
+                        type: 'GET', // POST or GET
+                        dataType: 'json', // Tell it we're retrieving JSON
+                        data: {
+                            id: $(this).attr('carlos') // Pass through the ID of the current element matched by '.selector'
+                        },
+                    }).then( function(data) {
+                        var content = "Company is: " + data.carlos.company;
+                        api.set({
+                            'content.text': content,
+                            'content.title': "NAME"
+                                });
+                    }, function(xhr, status, error) {
+                        // Upon failure... set the tooltip content to the status and error value
+                        api.set('content.text', status + ': ' + error);
+                    });
+                    return "Loading...";
                 }
             },
             position: {
