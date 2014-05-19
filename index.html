@@ -374,7 +374,7 @@
                 text: function(event, api) {
                     var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
                     var attrID = $(this).attr("id");
-
+                    console.log(attrID);
                     // $.getJSON( "member_information.json", function( json ) {
                     // })
 
@@ -383,14 +383,29 @@
                         type: 'GET', // POST or GET
                         dataType: 'json', // Tell it we're retrieving JSON
                         data: {
-                            id: $(this).attr('carlos') // Pass through the ID of the current element matched by '.selector'
+                            id: $(this).attr('id') // Pass through the ID of the current element matched by '.selector'
                         },
                     }).then( function(data) {
-                        var content = "Company is: " + data.carlos.company;
+                        var userCompany = "Current Organization: " + data.carlos.company;
+                        var userBio = data.carlos.bio;
+                        var userSkills = "Favorite Technologies: ";
+                        var interests = "Interests: " + data.carlos.interests;
+                        
+                        for(item in data.carlos.skills) {
+                            if( item == data.carlos.skills.length - 1) {
+                                userSkills += data.carlos.skills[item];
+                            }
+                            else {
+                                userSkills += data.carlos.skills[item] + ", ";
+                            }
+                        }
+
+                        var br = "<br>";
+                        var image = "<img src=" + "img/companies/" + attrID + ".png>";
                         api.set({
-                            'content.text': content,
-                            'content.title': "NAME"
-                                });
+                            'content.text': image + br + userCompany + br + interests + br +userSkills+ br + br + userBio,
+                            'content.title': "Carlos",
+                            });
                     }, function(xhr, status, error) {
                         // Upon failure... set the tooltip content to the status and error value
                         api.set('content.text', status + ': ' + error);
