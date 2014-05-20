@@ -4,5 +4,87 @@
 		"interests": "Skiing",
 		"bio": "Carlos is an aspiring software engineer and avid skier; his main areas of interest are database technologies and GPU programming. In his free time he love to explore different ski areas.",
 		"skills": ["C++", "Ruby on Rails", "OpenCL"]
+	},
+	"alex": {
+		"company" : "Facebook",
+		"interests" : "Ultimate Frisbee",
+		"bio" : "Alex is an upcoming engineer at Facebook.",
+		"skills" : ["Ruby on Rails", "Javascript", "Java"]
+	},
+	"dan" : {
+		"company" : "Linkedin",
+		"interests" : "Basketball",
+		"bio" : "Dan is an upcoming engineer at Linkedin.",
+		"skills" : ["Java", "SML", "Python"]
+	},
+	"sean" : {
+		"company" : "Google",
+		"interests" : "",
+		"bio" : "Dan is an upcoming engineer at Google.",
+		"skills" : ["Java", "C", "Python"]
+	},
+
+	"jonno": {
+		"company": "Microsoft",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+	"kevin_oh": {
+		"company" : "duke_medical",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+	"ken" : {
+		"company" : "Box",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+
+	"vincent" : {
+		"company" : "Duke",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+
+	"kevin_jian": {
+		"company": "Amazon",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+	"andy": {
+		"company" : "Palantir",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+	"benson" : {
+		"company" : "engineering_health",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+
+	"patrick" : {
+		"company" : "Duke",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+	"leeviana": {
+		"company" : "Microsoft",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
+	"chris" : {
+		"company" : "internnection",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
 	}
 }
