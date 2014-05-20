@@ -86,5 +86,11 @@
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
+	},
+	"ryan" : {
+		"company" : "idt",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
 	}
 }
