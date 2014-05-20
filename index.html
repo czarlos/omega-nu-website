@@ -100,22 +100,22 @@
         <h2>Team</h2>
             <div class="row row-team">
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="intel" class="thumbnail team">
+                    <a href="#" id="carlos" class="thumbnail team">
                         <img src="img/profile/seniors/carlos.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="facebook" class="thumbnail team">
+                    <a href="#" id="alex" class="thumbnail team">
                         <img src="img/profile/alumni/alex.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="linkedin" class="thumbnail team">
+                    <a href="#" id="dan" class="thumbnail team">
                         <img src="img/profile/alumni/dan.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="google" class="thumbnail team">
+                    <a href="#" id="sean" class="thumbnail team">
                         <img src="img/profile/alumni/sean.jpg" alt="...">
                     </a>
                 </div>
@@ -123,22 +123,22 @@
 
             <div class="row row-team">
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="microsoft" class="thumbnail team">
+                    <a href="#" id="jonno" class="thumbnail team">
                         <img src="img/profile/seniors/jonno.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="duke_medical" class="thumbnail team">
+                    <a href="#" id="kevin_oh" class="thumbnail team">
                         <img src="img/profile/seniors/kevin_oh.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="box" class="thumbnail team">
+                    <a href="#" id="ken" class="thumbnail team">
                         <img src="img/profile/seniors/ken.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="duke" class="thumbnail team">
+                    <a href="#" id="vincent" class="thumbnail team">
                         <img src="img/profile/seniors/vincent.jpg" alt="...">
                     </a>
                 </div>
@@ -146,22 +146,22 @@
 
             <div class="row row-team">
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="amazon" class="thumbnail team">
+                    <a href="#" id="kevin_jian" class="thumbnail team">
                         <img src="img/profile/seniors/kevin_jian.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="palantir" class="thumbnail team">
+                    <a href="#" id="andy" class="thumbnail team">
                         <img src="img/profile/seniors/andy.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="engineering_health" class="thumbnail team">
+                    <a href="#" id="benson" class="thumbnail team">
                         <img src="img/profile/seniors/benson.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="duke" class="thumbnail team">
+                    <a href="#" id="graham" class="thumbnail team">
                         <img src="img/profile/seniors/graham.jpg" alt="...">
                     </a>
                 </div>
@@ -169,22 +169,22 @@
 
             <div class="row row-team">
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="duke" class="thumbnail team">
+                    <a href="#" id="patrick" class="thumbnail team">
                         <img src="img/profile/juniors/patrick.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="microsoft" class="thumbnail team">
+                    <a href="#" id="leeviana" class="thumbnail team">
                         <img src="img/profile/seniors/leeviana.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="internnection" class="thumbnail team">
+                    <a href="#" id="chris" class="thumbnail team">
                         <img src="img/profile/seniors/chris.jpg" alt="...">
                     </a>
                 </div>
                 <div class="col-xs-6 col-md-3">
-                    <a href="#" id="idt" class="thumbnail team">
+                    <a href="#" id="ryan" class="thumbnail team">
                         <img src="img/profile/seniors/ryan.jpg" alt="...">
                     </a>
                 </div>
@@ -315,7 +315,7 @@
                 </div>
                 <div class="col-xs-6 col-md-3">
                     <a href="#" class="thumbnail technologies">
-                        <img src="img/technologies/ruby.png"  style="padding:50px;"  alt="...">
+                        <img src="img/technologies/ruby.png" alt="...">
                     </a>
                 </div>
             </div>
@@ -378,10 +378,8 @@
             content: {
                 text: function(event, api) {
                     var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
-                    var attrID = $(this).attr("id");
-                    console.log(attrID);
-                    // $.getJSON( "member_information.json", function( json ) {
-                    // })
+                    var myName = $(this).attr("id");
+                    console.log(myName);
 
                     $.ajax({
                         url: 'member_information.json', // URL to the JSON file
@@ -391,25 +389,26 @@
                             id: $(this).attr('id') // Pass through the ID of the current element matched by '.selector'
                         },
                     }).then( function(data) {
-                        var userCompany = "Current Organization: " + data.carlos.company;
-                        var userBio = data.carlos.bio;
+                        var userCompany = "Current Organization: " + data[myName].company;
+                        var userBio = data[myName].bio;
                         var userSkills = "Favorite Technologies: ";
-                        var interests = "Interests: " + data.carlos.interests;
+                        var interests = "Interests: " + data[myName].interests;
+                        var imgPath = "img/companies/" + data[myName].company.toLowerCase();
                         
-                        for(item in data.carlos.skills) {
-                            if( item == data.carlos.skills.length - 1) {
-                                userSkills += data.carlos.skills[item];
+                        for(item in data[myName].skills) {
+                            if( item == data[myName].skills.length - 1) {
+                                userSkills += data[myName].skills[item];
                             }
                             else {
-                                userSkills += data.carlos.skills[item] + ", ";
+                                userSkills += data[myName].skills[item] + ", ";
                             }
                         }
 
                         var br = "<br>";
-                        var image = "<img src=" + "img/companies/" + attrID + ".png>";
+                        var image = "<img src=" + imgPath + ".png>";
                         api.set({
                             'content.text': image + br + userCompany + br + interests + br +userSkills+ br + br + userBio,
-                            'content.title': "Carlos",
+                            'content.title': myName,
                             });
                     }, function(xhr, status, error) {
                         // Upon failure... set the tooltip content to the status and error value
