@@ -68,6 +68,12 @@
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
+	"graham" : {
+		"company" : "Duke",
+		"interests": "Coding",
+		"bio": "My bio",
+		"skills": ["Java", "Javascript", "Python"]
+	},
 
 	"patrick" : {
 		"company" : "Duke",
@@ -82,13 +88,13 @@
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"chris" : {
-		"company" : "internnection",
+		"company" : "Internnection",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"ryan" : {
-		"company" : "idt",
+		"company" : "IDT",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
