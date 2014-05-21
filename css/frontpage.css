@@ -353,6 +353,7 @@ body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
+/*Centering images, currently used on projects page*/
 img.center {
     display: block;
     margin-left: auto;
