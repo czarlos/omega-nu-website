@@ -1,4 +1,5 @@
-omega-nu-website
-================
+Omega Nu
+====
+----
 
-The official website for the Duke Omega Nu Computer Science organization.
+The repository for the [Omega Nu](www.omeganu.us) website.
