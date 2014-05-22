@@ -378,7 +378,7 @@
             content: {
                 text: function(event, api) {
                     var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
-                    var myName = $(this).attr("id");
+                    var myID = $(this).attr("id");
                     $.ajax({
                         url: 'member_information.json', // URL to the JSON file
                         type: 'GET', // POST or GET
@@ -387,18 +387,19 @@
                             id: $(this).attr('id') // Pass through the ID of the current element matched by '.selector'
                         },
                     }).then( function(data) {
-                        var userCompany = "Current Organization: " + data[myName].company;
-                        var userBio = data[myName].bio;
+                        var userCompany = "Current Organization: " + data[myID].company;
+                        var userBio = data[myID].bio;
+                        var userName = data[myID].person;
                         var userSkills = "Favorite Technologies: ";
-                        var interests = "Interests: " + data[myName].interests;
-                        var imgPath = "img/companies/" + data[myName].company.toLowerCase();
+                        var interests = "Interests: " + data[myID].interests;
+                        var imgPath = "img/companies/" + data[myID].company.toLowerCase();
                         
-                        for(item in data[myName].skills) {
-                            if( item == data[myName].skills.length - 1) {
-                                userSkills += data[myName].skills[item];
+                        for(item in data[myID].skills) {
+                            if( item == data[myID].skills.length - 1) {
+                                userSkills += data[myID].skills[item];
                             }
                             else {
-                                userSkills += data[myName].skills[item] + ", ";
+                                userSkills += data[myID].skills[item] + ", ";
                             }
                         }
 
@@ -406,7 +407,7 @@
                         var image = "<img src=" + imgPath + ".png>";
                         api.set({
                             'content.text': image + br + userCompany + br + interests + br +userSkills+ br + br + userBio,
-                            'content.title': myName,
+                            'content.title': userName,
                             });
                     }, function(xhr, status, error) {
                         // Upon failure... set the tooltip content to the status and error value

@@ -1,24 +1,28 @@
 {
 	"carlos": {
 		"company": "Intel",
+		"person" : "Carlos Reyes",
 		"interests": "Skiing",
 		"bio": "Carlos is an aspiring software engineer and avid skier; his main areas of interest are database technologies and GPU programming. In his free time he love to explore different ski areas.",
 		"skills": ["C++", "Ruby on Rails", "OpenCL"]
 	},
 	"alex": {
 		"company" : "Facebook",
+		"person" : "Alex Pien",
 		"interests" : "Ultimate Frisbee",
 		"bio" : "Alex is an upcoming engineer at Facebook.",
 		"skills" : ["Ruby on Rails", "Javascript", "Java"]
 	},
 	"dan" : {
 		"company" : "Linkedin",
+		"person" : "Dan Deng",
 		"interests" : "Basketball",
 		"bio" : "Dan is an upcoming engineer at Linkedin.",
 		"skills" : ["Java", "SML", "Python"]
 	},
 	"sean" : {
 		"company" : "Google",
+		"person" : "Sean Miller",
 		"interests" : "",
 		"bio" : "Dan is an upcoming engineer at Google.",
 		"skills" : ["Java", "C", "Python"]
@@ -26,18 +30,21 @@
 
 	"jonno": {
 		"company": "Microsoft",
+		"person" : "Jonathan Schmidt",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"kevin_oh": {
 		"company" : "duke_medical",
+		"person" : "Kevin Oh",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"ken" : {
 		"company" : "Box",
+		"person" : "Ken McAndrews",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
@@ -45,6 +52,7 @@
 
 	"vincent" : {
 		"company" : "Duke",
+		"person" : "Vincent Wang",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
@@ -52,24 +60,28 @@
 
 	"kevin_jian": {
 		"company": "Amazon",
+		"person" : "Kevin Jian",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"andy": {
 		"company" : "Palantir",
+		"person" : "Andy Bradshaw",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"benson" : {
 		"company" : "engineering_health",
+		"person" : "Benson Tran",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"graham" : {
 		"company" : "Duke",
+		"person" : "Graham Miller",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
@@ -77,24 +89,28 @@
 
 	"patrick" : {
 		"company" : "Duke",
+		"person" : "Patrick Schutz",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"leeviana": {
 		"company" : "Microsoft",
+		"person" : "Leeviana Gray",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"chris" : {
 		"company" : "Internnection",
+		"person" : "Chris Murphy",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"ryan" : {
 		"company" : "IDT",
+		"person" : "Ryan Fishel",
 		"interests": "Coding",
 		"bio": "My bio",
 		"skills": ["Java", "Javascript", "Python"]
