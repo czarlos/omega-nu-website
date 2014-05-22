@@ -24,7 +24,7 @@
 		"company" : "Google",
 		"person" : "Sean Miller",
 		"interests" : "",
-		"bio" : "Dan is an upcoming engineer at Google.",
+		"bio" : "Sean is an upcoming engineer at Google.",
 		"skills" : ["Java", "C", "Python"]
 	},
 
@@ -73,7 +73,7 @@
 		"skills": ["Java", "Javascript", "Python"]
 	},
 	"benson" : {
-		"company" : "engineering_health",
+		"company" : "Google",
 		"person" : "Benson Tran",
 		"interests": "Coding",
 		"bio": "My bio",
