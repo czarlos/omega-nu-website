@@ -93,6 +93,7 @@ a:focus {
 .navbar-toggle:active {
   outline: none;
 }
+
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
@@ -105,7 +106,7 @@ a:focus {
   }
   .top-nav-collapse {
     padding: 0;
-    background-color: #000;
+    background-color: #000 !important;
   }
   .navbar-custom.top-nav-collapse {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
