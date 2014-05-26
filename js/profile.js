@@ -24,7 +24,7 @@ $('.team').qtip({ // Grab some elements to apply the tooltip to
                     }
                     else {
                         userSkills += data[myID].skills[item] + ", ";                            }
-                    }
+                }
 
                 var br = "<br>";
                 var image = "<img src=" + imgPath + ".png>";
