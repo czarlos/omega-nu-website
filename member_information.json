@@ -1,6 +1,7 @@
 {
 	"carlos": {
 		"company": "Intel",
+		"concentrations" : ["Chemistry", "Computer Science"],
 		"person" : "Carlos Reyes",
 		"interests": "Skiing",
 		"bio": "Carlos is an aspiring software engineer and avid skier; his main areas of interest are database technologies and GPU programming. In his free time he love to explore different ski areas.",
@@ -8,6 +9,7 @@
 	},
 	"alex": {
 		"company" : "Facebook",
+		"concentrations" : ["BME", "Computer Science"],
 		"person" : "Alex Pien",
 		"interests" : "Ultimate Frisbee",
 		"bio" : "Alex is an upcoming engineer at Facebook.",
@@ -15,6 +17,7 @@
 	},
 	"dan" : {
 		"company" : "Linkedin",
+		"concentrations" : ["Economics", "Computer Science"],
 		"person" : "Dan Deng",
 		"interests" : "Basketball",
 		"bio" : "Dan is an upcoming engineer at Linkedin.",
@@ -22,6 +25,7 @@
 	},
 	"sean" : {
 		"company" : "Google",
+		"concentrations" : ["Computer Science"],
 		"person" : "Sean Miller",
 		"interests" : "",
 		"bio" : "Sean is an upcoming engineer at Google.",
@@ -30,6 +34,7 @@
 
 	"jonno": {
 		"company": "Microsoft",
+		"concentrations" : ["Computer Science"],
 		"person" : "Jonathan Schmidt",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -37,6 +42,7 @@
 	},
 	"kevin_oh": {
 		"company" : "Duke_Medical",
+		"concentrations" : ["Computer Science"],
 		"person" : "Kevin Oh",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -44,6 +50,7 @@
 	},
 	"ken" : {
 		"company" : "Box",
+		"concentrations" : ["Computer Science"],
 		"person" : "Ken McAndrews",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -52,6 +59,7 @@
 
 	"vincent" : {
 		"company" : "Duke",
+		"concentrations" : ["Computer Science"],
 		"person" : "Vincent Wang",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -60,6 +68,7 @@
 
 	"kevin_jian": {
 		"company": "Amazon",
+		"concentrations" : ["Computer Science"],
 		"person" : "Kevin Jian",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -67,6 +76,7 @@
 	},
 	"andy": {
 		"company" : "Palantir",
+		"concentrations" : ["Computer Science"],
 		"person" : "Andy Bradshaw",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -74,6 +84,7 @@
 	},
 	"benson" : {
 		"company" : "Google",
+		"concentrations" : ["Computer Science"],
 		"person" : "Benson Tran",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -81,6 +92,7 @@
 	},
 	"graham" : {
 		"company" : "Duke",
+		"concentrations" : ["Computer Science"],
 		"person" : "Graham Miller",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -89,6 +101,7 @@
 
 	"patrick" : {
 		"company" : "Duke",
+		"concentrations" : ["Computer Science"],
 		"person" : "Patrick Schutz",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -96,6 +109,7 @@
 	},
 	"leeviana": {
 		"company" : "Microsoft",
+		"concentrations" : ["Computer Science"],
 		"person" : "Leeviana Gray",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -103,6 +117,7 @@
 	},
 	"chris" : {
 		"company" : "Internnection",
+		"concentrations" : ["Computer Science"],
 		"person" : "Chris Murphy",
 		"interests": "Coding",
 		"bio": "My bio",
@@ -110,6 +125,7 @@
 	},
 	"ryan" : {
 		"company" : "IDT",
+		"concentrations" : ["Computer Science"],
 		"person" : "Ryan Fishel",
 		"interests": "Coding",
 		"bio": "My bio",
