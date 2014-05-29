@@ -6,8 +6,8 @@ var user_model = require('../models/users_model.js');
 mongoose.connect("mongodb://localhost:27017/test");
 
 router.get('/', function(req, res) {
-	mongoose.model('users').find({_id: "carlos"}, function(err, users) {
-		res.send(users[0]);
+	mongoose.model('users').find(null, function(err, users) {
+		res.send(users);
 	});
 });
 
