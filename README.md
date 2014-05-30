@@ -1,6 +1,5 @@
 Omega Nu
 =========
---------
 Welcome to the official repository for Omega Nu's website! Skip to the end to learn about contributing!
 
 ##Current Priorities##
