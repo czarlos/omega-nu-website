@@ -18,9 +18,6 @@ Check out [Omega Nu] [site]!:
 > The site is aimed at both providing information about
 > members and finding new members.
 
-If you have any suggestions for improvements that we could make please feel free to contribute or send us an [email][email]!
-  
-
 ##Version##
 
 1.0
