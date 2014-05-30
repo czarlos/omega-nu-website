@@ -99,97 +99,27 @@
 
     <section id="team-page" class="content-section text-center">
         <h2>Team</h2>
-            <div class="row row-team">
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="carlos" class="thumbnail team">
-                        <img src="img/profile/seniors/carlos.jpg" alt="...">
-                    </a>
+            
+            <% for (var i=0; i<(team.length - team.length%4); i+=4) { %>
+                <div class="row row-team">
+                    <% for(var x=i; x<i+4; x++) { %>
+                        <div class="col-xs-6 col-sm-3 col-md-3">
+                            <a href="javascript:;" id=<%= team[x]._id %> class="thumbnail team">
+                                <img src="img/profile/<%= team[x]._id %>.jpg" alt="...">
+                            </a>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="alex" class="thumbnail team">
-                        <img src="img/profile/alumni/alex.jpg" alt="...">
-                    </a>
+            <% } %>
+            <% for (var i=0; i<(team.length%4); i++) { %>
+                <div class="row row-team">
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <a href="javascript:;" id=<%= team[i]._id %> class="thumbnail team">
+                            <img src="img/profile/<%= team[i]._id %>.jpg" alt="...">
+                        </a>
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="dan" class="thumbnail team">
-                        <img src="img/profile/alumni/dan.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="sean" class="thumbnail team">
-                        <img src="img/profile/alumni/sean.jpg" alt="...">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row row-team">
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="jonno" class="thumbnail team">
-                        <img src="img/profile/seniors/jonno.jpg" alt="...">
-					</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="kevin_oh" class="thumbnail team">
-                        <img src="img/profile/seniors/kevin_oh.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="ken" class="thumbnail team">
-                        <img src="img/profile/seniors/ken.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="vincent" class="thumbnail team">
-                        <img src="img/profile/seniors/vincent.jpg" alt="...">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row row-team">
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="kevin_jian" class="thumbnail team">
-                        <img src="img/profile/seniors/kevin_jian.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="andy" class="thumbnail team">
-                        <img src="img/profile/seniors/andy.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="benson" class="thumbnail team">
-                        <img src="img/profile/seniors/benson.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="graham" class="thumbnail team">
-                        <img src="img/profile/seniors/graham.jpg" alt="...">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row row-team">
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="patrick" class="thumbnail team">
-                        <img src="img/profile/juniors/patrick.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="leeviana" class="thumbnail team">
-                        <img src="img/profile/seniors/leeviana.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="chris" class="thumbnail team">
-                        <img src="img/profile/seniors/chris.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <a href="javascript:;" id="ryan" class="thumbnail team">
-                        <img src="img/profile/seniors/ryan.jpg" alt="...">
-                    </a>
-                </div>
-            </div>
+            <% } %>
 
     </section>
 
