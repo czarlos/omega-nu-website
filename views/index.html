@@ -159,120 +159,29 @@
 
     <section id="technologies-page" class="content-section text-center">
             <h2>Technologies</h2>
-            <div class="row row-team">
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.php.net/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/php.png" alt="PHP" title="PHP">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.msdn.microsoft.com/en-us/vstudio/hh341490.aspx" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/csharp.png" alt="C#" title="C#">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.cplusplus.com/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/c++.png" alt="C++" title="C++">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://www.khronos.org/opencl/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/opencl.png" alt="OpenCL" title="OpenCL">
-                    </a>
-                </div>
-            </div>
 
-            <div class="row row-team">
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://www.apple.com/ios/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/ios7.png" alt="iOS7" title="iOS7">
-                    </a>
+            <% var technologies = ["php", "csharp", "c++", "opencl", "ios7", "memcached", "nuodb", "scala", "android", "postgres", "python", "rails", "vim", "mongo", "java", "ruby", "redis", "mysql", "git", "webstack"] %>
+             <% for (var i=0; i<(technologies.length - technologies.length%4); i+=4) { %>
+                <div class="row row-team">
+                    <% for(var x=i; x<i+4; x++) { %>
+                        <div class="col-xs-3 col-md-3">
+                            <a href="javascript:;" class="thumbnail technologies">
+                                <img src="img/technologies/<%= technologies[x] %>.png">
+                            </a>
+                        </div>
+                    <% } %>
                 </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.memcached.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/memcached.png" alt="Memcached" title="Memcached">
-                    </a>
+            <% } %>
+            <% for (var i=0; i<(technologies.length%4); i++) { %>
+                <div class="row row-team">
+                    <div class="col-xs-3 col-md-3">
+                        <a href="javascript:;" class="thumbnail technologies">
+                            <img src="img/technologies/<% technologies[i] %>.png">
+                        </a>
+                    </div>
                 </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.nuodb.com/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/nuodb.png" alt="NuoDB" title="NuoDB">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.scala-lang.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/scala.png" alt="Scala" title="Scala">
-                    </a>
-                </div>
-            </div>
+            <% } %>
 
-            <div class="row row-team">
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.android.com/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/android.png" alt="Android" title="Android">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.postgresql.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/postgres.png" alt="PostgreSQL" title="PostgreSQL">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://www.python.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/python.png" alt="Python" title="Python">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.rubyonrails.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/rails.png" alt="Ruby on Rails" title="Ruby on Rails">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row row-team">
-                <div class="col-xs-3 col-md-3">
-                    <a href="#" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/vim.png" alt="Vim" title="Vim">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.mongodb.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/mongo.png" alt="MongoDB" title="MongoDB">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.vim.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/java.png" alt="Java" title="Java">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.java.com/en/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/ruby.png" alt="Ruby" title="Ruby">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row row-team">
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.redis.io/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/redis.png" alt="Redis" title="Redis">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.mysql.com/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/mysql.png" alt="MySQL" title="MySQL">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.git-scm.com/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/git.png" alt="Git" title="Git">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="http://www.w3.org/" class="thumbnail technologies">
-                        <img class="img-responsive" src="img/technologies/webstack.png" alt="JS/HTML/CSS" title="JS/HTML/CSS">
-                    </a>
-                </div>
-            </div>
     </section>
 
 	<section id="contact" class="container content-section text-center">
