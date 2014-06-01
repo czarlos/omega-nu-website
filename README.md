@@ -6,10 +6,9 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Create basic login for team members
     - Users should be able to update their hover-over information in the database
   - Front end javascript needs to be restructured, pushing some current operations server-side
-  - Slim down HTML via a templating engine
 
 ##About##
-Check out [Omega Nu] [site]!:
+Check out [Omega Nu] [site] :
 
 > The goal of the website is to provide an
 > overview of Omega Nu as an organization at Duke and 
