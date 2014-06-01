@@ -53,7 +53,7 @@ npm install
 ```
 #####Start the database#####
 ```sh
-mongodb --dbpath data/
+mongod --dbpath data/
 ```
 
 #####Import the data (dev only, this is temporary!)#####
