@@ -11,14 +11,24 @@ router.post('/', function(req, res) {
 	console.dir(req.body.first_name);
 
 	var winesSchema = new mongoose.Schema({
-		first_name: 'string',
-		last_name: 'string'
+		first_name: String,
+		last_name: String,
+		github_handle: String,
+		email: String,
+		linkedin: String,
+		website: String,
+		about: String
 	}); 
 	console.dir("real " + req.body.first_name);
 	var Money = mongoose.model('Book', winesSchema);
 	var small = new Money({
 		first_name: req.body.first_name,
-		last_name: req.body.last_name
+		last_name: req.body.last_name,
+		github_handle: req.body.github_handle,
+		email: req.body.email,
+		linkedin: req.body.linkedin,
+		website: req.body.website,
+		about: req.body.about
 	});
 	small.save(function (err) {
 		if (err) {
