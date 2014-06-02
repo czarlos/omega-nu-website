@@ -8,7 +8,6 @@ router.post('/', function(req, res) {
 	res.render('application', function(err, html){
 		
 	});	
-	console.dir(req.body.first_name);
 
 	var winesSchema = new mongoose.Schema({
 		first_name: String,
@@ -19,9 +18,8 @@ router.post('/', function(req, res) {
 		website: String,
 		about: String
 	}); 
-	console.dir("real " + req.body.first_name);
-	var Money = mongoose.model('Book', winesSchema);
-	var small = new Money({
+	var Applicant = mongoose.model('Applicants', winesSchema);
+	var applicant = new Applicant({
 		first_name: req.body.first_name,
 		last_name: req.body.last_name,
 		github_handle: req.body.github_handle,
@@ -30,7 +28,7 @@ router.post('/', function(req, res) {
 		website: req.body.website,
 		about: req.body.about
 	});
-	small.save(function (err) {
+	applicant.save(function (err) {
 		if (err) {
 			return handleError(err);
 		}
