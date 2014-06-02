@@ -16,7 +16,8 @@ router.post('/', function(req, res) {
 		email: String,
 		linkedin: String,
 		website: String,
-		about: String
+		about: String,
+		resume: Buffer
 	}); 
 	var Applicant = mongoose.model('Applicants', winesSchema);
 	var applicant = new Applicant({
@@ -26,7 +27,8 @@ router.post('/', function(req, res) {
 		email: req.body.email,
 		linkedin: req.body.linkedin,
 		website: req.body.website,
-		about: req.body.about
+		about: req.body.about,
+		resume: req.body.resume
 	});
 	applicant.save(function (err) {
 		if (err) {
