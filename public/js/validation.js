@@ -22,12 +22,12 @@ $('form').validate({
 			required: true
 		},
 		website: {
-			minlength: 3,
+			minlength: 6,
 			maxlength: 15,
 			url: true
 		},
 		linkedin: {
-			minlength: 3,
+			minlength: 6,
 			maxlength: 15,
 			url: true 
 		}
