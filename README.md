@@ -5,10 +5,9 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
 ##Current Priorities##
   - Create basic login for team members
     - Users should be able to update their hover-over information in the database
-  - Front end javascript needs to be restructured, pushing some current operations server-side
 
 ##About##
-Check out [Omega Nu] [site] :
+Check out [Omega Nu] [site].
 
 > The goal of the website is to provide an
 > overview of Omega Nu as an organization at Duke and 
@@ -33,7 +32,7 @@ We utilized some awesome technologies to build the site!
 * [jQuery] - Better than sliced bread.
 * [mongoDB] - A great NoSQL database!
 * [mongoose] - Provides object modeling for node.js
-
+* [heroku] - PaaS
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
       - Commit anything you want, if you are making any major changes please make a new branch
@@ -50,7 +49,7 @@ cd omega-nu-website/
 mkdir data/
 npm install
 ```
-#####Start the database#####
+#####Start the database (on Ubuntu, mongodb is alraedy running)#####
 ```sh
 mongod --dbpath data/
 ```
@@ -70,6 +69,7 @@ npm start
 
 **Enjoy!**
 
+[heroku]: http://heroku.com/
 [mongoose]:http://mongoosejs.com/
 [mongoDB]:http://www.mongodb.org/
 [email]:info@omeganu.us
