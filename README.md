@@ -33,6 +33,7 @@ We utilized some awesome technologies to build the site!
 * [mongoDB] - A great NoSQL database!
 * [mongoose] - Provides object modeling for node.js
 * [heroku] - PaaS
+
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
       - Commit anything you want, if you are making any major changes please make a new branch
