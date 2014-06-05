@@ -41,8 +41,14 @@ We utilized some awesome technologies to build the site!
   2. If you're not a member, considering applying, we'd love to have you on our team! 
       - Alternatively fork the repo and file a pull request.
 
+##Guidelines##
+  1. Please don't push to the 'static_site' branch, it preserves a non-webapp version of the site.
+  2. Take care when pushing to the release branch not to overwrite any of the heroku settings.
+     - We'll add appropriate protective measures soon.
+  3. Make sure not to include any sensitive information in the repo (passwords, etc).
+  4. If the [omeganu.us] link doesn't work, try [omeganu.herokuapp.us].
 
-##Installing##
+##Running Locally##
 
 #####Prepare the app#####
 ```sh
