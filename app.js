@@ -12,7 +12,7 @@ var application = require('./routes/application');
 var app = express();
 
 //listen on port 8888
-app.listen(8888);
+app.listen(process.env.PORT || 8888);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
