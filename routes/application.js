@@ -6,9 +6,8 @@ Applicant = require('../models/applicant_model.js');
 
 var mongoURI = process.env.MONGOLAB;
 var mongooseURI = uriUtil.formatMongoose(mongoURI);
-//var db = mongoose.connect(mongooseURI);
-console.log("hello " + mongooseURI);
-mongoose.connect(mongooseURI);
+var db = mongoose.connect(mongooseURI);
+
 router.post('/', function(req, res) {
 	res.render('application', function(err, html){
 		
