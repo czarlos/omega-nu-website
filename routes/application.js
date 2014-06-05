@@ -7,7 +7,7 @@ Applicant = require('../models/applicant_model.js');
 var mongoURI = process.env.MONGOLAB;
 var mongooseURI = uriUtil.formatMongoose(mongoURI);
 //var db = mongoose.connect(mongooseURI);
-console.log("hello " + process.env['MONEY']);
+console.log("hello " + process.env.MONGOLAB);
 mongoose.connect("mongodb://omeganu:omeganu1@ds061787.mongolab.com:61787/omeganu");
 router.post('/', function(req, res) {
 	res.render('application', function(err, html){
