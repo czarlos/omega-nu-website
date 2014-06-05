@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var uriUtil = require('mongodb-uri');
 Applicant = require('../models/applicant_model.js');
 
-var db = mongoose.connect("mongodb://localhost:27017/test");
+var mongoURI = process.env.MONGOLAB;
+var mongooseURI = uriUtil.formatMOngoose(mongoURI);
+
+var db = mongoose.connect(mongooseURI);
 
 router.post('/', function(req, res) {
 	res.render('application', function(err, html){
