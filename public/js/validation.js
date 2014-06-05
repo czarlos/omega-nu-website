@@ -23,13 +23,11 @@ $('form').validate({
 		},
 		website: {
 			minlength: 6,
-			maxlength: 15,
-			url: true
+			maxlength: 55,
 		},
 		linkedin: {
 			minlength: 6,
-			maxlength: 15,
-			url: true 
+			maxlength: 55,
 		}
 	},
 	highlight: function(element) {

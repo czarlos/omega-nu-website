@@ -4,7 +4,7 @@ $('.team').qtip({ // Grab some elements to apply the tooltip to
             var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
             var myID = $(this).attr("id");
             $.ajax({
-                url: 'http://localhost:8888/users', // URL to the JSON file
+                url: 'http://omeganu.herokuapp.com/users', // URL to the JSON file
                 type: 'GET', // POST or GET
                 dataType: 'json', // Tell it we're retrieving JSON
                 data: {
