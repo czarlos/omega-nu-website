@@ -5,7 +5,7 @@ var uriUtil = require('mongodb-uri');
 Applicant = require('../models/applicant_model.js');
 
 var mongoURI = process.env.MONGOLAB;
-var mongooseURI = uriUtil.formatMOngoose(mongoURI);
+var mongooseURI = uriUtil.formatMongoose(mongoURI);
 
 var db = mongoose.connect(mongooseURI);
 
