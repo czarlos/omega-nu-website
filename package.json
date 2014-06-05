@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "body-parser": "~1.0.0",
+    "config-heroku": "^0.1.1-a",
     "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
     "express": "~4.2.0",
