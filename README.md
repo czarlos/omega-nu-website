@@ -46,7 +46,7 @@ We utilized some awesome technologies to build the site!
   2. Take care when pushing to the release branch not to overwrite any of the heroku settings.
      - We'll add appropriate protective measures soon.
   3. Make sure not to include any sensitive information in the repo (passwords, etc).
-  4. If the [omeganu.us](omeganu.us) link doesn't work, try [omeganu.herokuapp.us](omeganu.herokuapp.us).
+  4. If the [omeganu.us](http://omeganu.us) link doesn't work, try [omeganu.herokuapp.us](http://omeganu.herokuapp.us).
   5. What happens on release, stays on release, do not pull from release if you are on another branch, only push to it.
 
 ##Running Locally##
