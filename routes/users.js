@@ -7,6 +7,7 @@ var user_model = require('../models/users_model.js');
 
 router.get('/', function(req, res) {
 	mongoose.model('users').find(null, function(err, users) {
+		console.dir(users);
 		res.send(users);
 	});
 });

@@ -7,10 +7,9 @@ var user_model = require('../models/users_model.js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  //res.render('index', { title: 'Express' });
-	mongoose.model('users').find(null, function(err, users) {
-		res.render('index', {team: users});
-	});
+    mongoose.model('users').find().sort('_id').exec(function(err, users) {
+        res.render('index', {team: users});
+    });
 });  
 
 module.exports = router;
