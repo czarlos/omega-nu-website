@@ -5,6 +5,10 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
 ##Current Priorities##
   - Create basic login for team members
     - Users should be able to update their hover-over information in the database
+  - Use GridFS to store user profile images
+  - Optimize MongoDB queries, and client side javascript
+  - Add technologies images for user's profiles
+  - Add Github language statistics for users
 
 ##About##
 Check out [Omega Nu] [site].
