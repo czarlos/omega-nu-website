@@ -18,12 +18,10 @@ $('form').validate({
 			required: true
 		},
 		website: {
-			minlength: 6,
-			url: true
+			minlength: 6
 		},
 		linkedin: {
-			minlength: 6,
-			url: true 
+			minlength: 6
 		}
 	},
 	highlight: function(element) {
