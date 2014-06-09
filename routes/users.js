@@ -3,11 +3,10 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var user_model = require('../models/users_model.js');
 
-//mongoose.connect("mongodb://localhost:27017/test");
-
 router.get('/', function(req, res) {
-	mongoose.model('users').find(null, function(err, users) {
-		console.dir(users);
+	var id = req.query.id;
+	mongoose.model('users').findById(id, function(err, users) {	
+		//console.dir(users); //This is good for debugging but it probably slows down the popovers
 		res.send(users);
 	});
 });
