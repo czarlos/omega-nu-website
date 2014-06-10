@@ -36,8 +36,9 @@ We utilized some awesome technologies to build the site!
 * [jQuery] - Better than sliced bread.
 * [mongoDB] - A great NoSQL database!
 * [mongoose] - Provides object modeling for node.js
-* [Heroku] - PaaS
-* [MongoLab] - MongoDB as a service
+* [Heroku] - PaaS.
+* [MongoLab] - MongoDB as a service.
+* [Travis-CI] - Continuous automated testing.
 
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
