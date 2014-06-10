@@ -8,7 +8,7 @@ $('.team').qtip({ // Grab some elements to apply the tooltip to
                 type: 'GET', // POST or GET
                 dataType: 'json', // Tell it we're retrieving JSON
                 data: {
-                    id: $(this).attr('id') // Pass through the ID of the current element matched by '.selector'
+                    id: myID // Pass through the ID of the current element matched by '.selector'
                 },
             }).then( function(data) {
 				// This should probably be done serverside
