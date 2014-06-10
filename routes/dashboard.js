@@ -6,22 +6,19 @@ Dashboard = require('../models/dashboard_model.js');
 router.post('/', function(req, res) {
 	res.render('dashboard', function(err, html) {});
 	var dashboard = new Dashboard({
-		first_name: req.body.first_name,
-		last_name: req.body.last_name,
-		organization: req.body.organization,
+		person: req.body.first_name + req.body.last_name,
+		company: req.body.organization,
 		skills: req.body.skills,
-		website: req.body.website,
-		linkedin: req.body.linkedin,
 		bio: req.body.bio
 	});
-	dashboard.save(function(err) {
+	
+	Dashboard.find({person:"Carlos Reyes"}).update({person:"Carlos Reyes"}, {company:"YMCMB"}, function(err){
 		if (err) {
-			return handleError(err);
-		}
-		else {
-			res.redirect('/');
+			console.dir("err");
 		}
 	});
+
 });
+
 
 module.exports = router;
