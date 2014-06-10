@@ -2,6 +2,8 @@ Omega Nu
 =========
 Welcome to the official repository for Omega Nu's website! Skip to the end to learn about contributing!
 
+[![Build Status](https://travis-ci.org/czarlos/omega-nu-website.svg?branch=master)](https://travis-ci.org/czarlos/omega-nu-website)
+
 ##Current Priorities##
   - Create basic login for team members
     - Users should be able to update their hover-over information in the database
