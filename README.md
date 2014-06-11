@@ -1,4 +1,4 @@
-Omega Nu
+Omega Nu[site]
 =========
 Welcome to the official repository for Omega Nu's website! Skip to the end to learn about contributing!
 
@@ -11,6 +11,7 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Optimize MongoDB queries, and client side javascript
   - Add technologies images for user's profiles
   - Add Github language statistics for users
+  - Make a cool logo for Omega Nu
 
 ##About##
 Check out [Omega Nu] [site].
