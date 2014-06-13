@@ -97,3 +97,5 @@ npm start
 [Bootstrap]:http://twitter.github.com/bootstrap/
 [jQuery]:http://jquery.com
 [express.js]:http://expressjs.com
+[Travis CI]:https://travis-ci.org/
+[qTip2]:http://qtip2.com/
