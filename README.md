@@ -41,7 +41,8 @@ We utilized some awesome technologies to build the site!
 * [mongoose] - Provides object modeling for node.js
 * [Heroku] - PaaS.
 * [MongoLab] - MongoDB as a service.
-* [Travis-CI] - Continuous automated testing.
+* [Travis CI] - Continuous automated testing.
+* [qTip2] - Awesome tooltips!
 
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
