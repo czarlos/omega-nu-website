@@ -5,21 +5,21 @@ Dashboard = require('../models/dashboard_model.js');
 
 router.post('/', function(req, res) {
 	res.render('dashboard', function(err, html) {});
+	
+	var user = req.body.first_name + " " + req.body.last_name;
 	var dashboard = new Dashboard({
-		_id: "carlos",
-		person: req.body.first_name + " " + req.body.last_name,
-		company: req.body.organization,
+		_id: Dashboard.findOne({person: user})._id,
+		person: user,
+		company: req.body.company, //myFunction(company, req),
 		concentrations: "Concentration",
 		skills: req.body.skills,
 		bio: req.body.bio,
 		interests: "coding"
 	});
-	
-	var user = req.body.first_name + " " + req.body.last_name;	
-
-	Dashboard.findOne({person:"Carlos Reyes"}).update({company:"YMCMB"}, function(err){
+	console.dir(myFunction());	
+	Dashboard.findOne({person:user}).update(dashboard.toObject(), function(err){
 		if (err) {
-			console.dir("err");
+			return handleError(err);
 		}
 		else {
 			res.redirect('/');
@@ -27,5 +27,13 @@ router.post('/', function(req, res) {
 	});
 });
 
+function myFunction (field, req) {
+	if(field === "") {
+		return Dashboard.find({person: user}, {field: 1});
+	}
+	else {
+		return req.body[field];
+	}
+}
 
 module.exports = router;
