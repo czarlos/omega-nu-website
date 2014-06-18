@@ -9,28 +9,16 @@ router.post('/', function(req, res) {
 	var user = req.body.first_name + " " + req.body.last_name;
 
 	var dashboard = new Dashboard({
-		_id: "carlos",
+		_id: "",
 		person: user,
-		company: req.body.organization,
-		concentrations: "Concentration",
-		skills: req.body.skills,
-		bio: req.body.bio,
-		interests: "coding"
+		company: checkValue("company", user, req.body.organization),
+		concentrations: checkValue("concentrations", user, ""),
+		skills: checkValue("skills", user, req.body.skills),
+		bio: checkValue("bio", user, req.body.bio),
+		interests: checkValue("coding", user, "")
 	});
-	
-	
-	// Dashboard.findOne({person: user}, function(err, doc) {
-	// 	if (err) {
-	// 		console.dir(err);
-	// 	}
-	// 	else {
-	// 		console.dir(doc["company"]);
-	// 	}
-	// });
-	
-	//getValue(user, field);
 
-	Dashboard.findOne({person:"Carlos Reyes"}).update({company:"YMCMB"}, function(err){
+	Dashboard.findOne({person:user}).update(dashboard.toObject(), function (err) {
 		if (err) {
 			console.dir("err");
 		}
@@ -39,7 +27,7 @@ router.post('/', function(req, res) {
 		}
 	});
 });
-
+  
 function getValue (user, field) {
 	Dashboard.findOne({person: user}, function(err, doc) {
 		if (err) {
@@ -52,15 +40,13 @@ function getValue (user, field) {
 	});
 }
 
-function checkValue (doc, field. user, input) {
-	var value = doc[field];
-	if (value !== null && value !== "") {
+function checkValue (field, user, input) {
+	if (input !== null && input !== "") {
 		return input;
 	}
 	else {
 		getValue(user, field);
 	}
 }
-
-
+  
 module.exports = router;
