@@ -26,6 +26,8 @@
     <!-- CSS qTip2 -->
     <link type="text/css" rel="stylesheet" href="http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css" />
 
+    <link type="text/css" rel="stylesheet" href="css/login.css"/>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -60,9 +62,27 @@
                     <li class="page-scroll">
                         <a href="#technologies-page">Technologies</a>
                     </li>
-					<li>
-						<a class="fa fa-cog" id="login"></a>
-					</li>
+		    <li>
+		<!-- <span href="#" class="button fa fa-cog" id="toggle-login"></span> -->
+		<a href='#' class='fa fa-cog' id='toggle-login'></a>
+		<div id="login">
+
+		  <div id="triangle"></div>
+
+		  <h1>Log in</h1>
+
+		  <form>
+
+		    <input type="email" placeholder="Email" />
+
+		    <input type="password" placeholder="Password" />
+
+		    <input type="submit" value="Log in" />
+
+		  </form>
+
+		</div>
+		</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -221,7 +241,7 @@
     <script type="text/javascript" src="js/mobileNavbar.js"></script>
 
 	<!-- Login tooltip -->	
-	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/login2.js"></script>
 </body>
 
 </html>

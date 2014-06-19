@@ -8,6 +8,9 @@ $('#login').qtip({
 		}
     },
     position: {
+	adjust : {
+		screeen: true
+	},
         my: 'center',
         at: 'center',
         target: $(document.body)
