@@ -26,6 +26,7 @@ body{
 }
 
 #login{
+  display: none;
   max-width: 250px;
   margin:0 auto;
   margin-top:0px;
@@ -84,5 +85,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background:#2288bb;
+  background:#2E408A;
 }
