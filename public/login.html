@@ -1,54 +1,21 @@
-<!DOCTYPE HTML>
-
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<title>Omega Nu / Login</title>
-
-	<!-- FAVICON -->
-	<link rel="shortcut icon" href="img/favicon/omega.ico" type="image/x-icon" >
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-</head>
-
-	<form role="form" id="container" method="post" action="application">
-		<h3 align="middle">Sign in.</h3>
-		<div class="row">
-			<div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-				<div class="form-group">
-					<input type="text" name="user" id="user" class="form-control input-md" placeholder="User Name" tabindex="1">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-				<div class="form-group">
-					<input type="text" name="password" id="password" class="form-control input-md" placeholder="Password" tabindex="2">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-				<input type="submit" id="submit_button" value="submit" class="btn btn-primary btn-block btn-md" tabindex="7">
-			</div>
-		</div>
-	</form>
-
-</html>
+<span href="#" class="button" id="toggle-login">Log in</span>
 
 
-<style type="text/css">
-	#container {
-		border: 1px solid rgba(0, 0, 0, 0.2);
-		border-radius: 10px;
-		padding: 10px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		min-width: 250px;
-	}
-	.navbar-default {
-		background-color: transparent;
-	}
-</style>
+
+<div id="login">
+
+  <div id="triangle"></div>
+
+  <h1>Log in</h1>
+
+  <form>
+
+    <input type="email" placeholder="Email" />
+
+    <input type="password" placeholder="Password" />
+
+    <input type="submit" value="Log in" />
+
+  </form>
+
+</div>
