@@ -37,15 +37,16 @@ $( document ).ready( function() {
 
 function ajaxReq (api, myID, curr) {
 	var data = (teamMap[curr.attr('id')]);
+	data = data.responseJSON
 	console.log(data);
+	console.log(data._id);
                 // This should probably be done serverside
-                for (var i = 0; i < data.length; i++) {
+                /*for (var i = 0; i < data.length; i++) {
                     if (data[i]._id == myID) {
                         data = data[i];
                         break;
                     }
-                }
-                console.log(data._id);
+                }*/
                 var userCompany = "Current Organization: " + data.company;
                 var userBio = data.bio;
                 var userName = data.person;
