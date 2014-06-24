@@ -1,24 +1,51 @@
+//Globals
+var teamMap = {};
+
+//Auto Invoked
 $('.team').qtip({ // Grab some elements to apply the tooltip to
     content: {
         text: function(event, api) {
             var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
             var myID = $(this).attr("id");
-            $.ajax({
-                url: 'http://localhost:8888/users', // URL to the JSON file
-                type: 'GET', // POST or GET
-                dataType: 'json', // Tell it we're retrieving JSON
-                data: {
-                    id: myID // Pass through the ID of the current element matched by '.selector'
-                },
-            }).then( function(data) {
-				// This should probably be done serverside
-				for (var i = 0; i < data.length; i++) {
-					if (data[i]._id == myID) {
-						data = data[i];
-						break;
-					}
-				}
-				console.log(data._id);
+            ajaxReq(api, myID, $(this));
+            return "Loading...";
+        }
+    },
+    position: {
+        viewport: $(window),
+        my: 'left center',
+        at: 'center right'
+    },
+    style: {
+        classes: 'qtip-tipped qtip-rounded qtip-shadow'
+    },
+    show: {
+        effect: function() {
+            $(this).slideDown();
+        }
+    },
+    hide: {
+        effect: function() {
+            $(this).slideUp();
+        }
+    }
+});
+
+$( document ).ready( function() {
+    getUserData();
+});
+
+function ajaxReq (api, myID, curr) {
+	var data = (teamMap[curr.attr('id')]);
+	console.log(data);
+                // This should probably be done serverside
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i]._id == myID) {
+                        data = data[i];
+                        break;
+                    }
+                }
+                console.log(data._id);
                 var userCompany = "Current Organization: " + data.company;
                 var userBio = data.bio;
                 var userName = data.person;
@@ -41,32 +68,20 @@ $('.team').qtip({ // Grab some elements to apply the tooltip to
                     'content.text': popupContent,
                     'content.title': userName,
                 });
-            }, function(xhr, status, error) {
-                // Upon failure... set the tooltip content to the status and error value
-                api.set('content.text', status + ': ' + error);
+}
+
+function getUserData () {
+    $('.team').each(function () {
+        var ajaxObject = 
+            $.ajax( {
+                url: 'http://localhost:8888/users', // URL to the JSON file
+                type: 'GET', // POST or GET
+                dataType: 'json', // Tell it we're retrieving JSON
+                data: {
+                    id: this.id
+                },
             });
-            return "Loading...";
-        }
-    },
-    position: {
-        viewport: $(window),
-        my: 'left center',
-        at: 'center right'
-    },
-    style: {
-        classes: 'qtip-tipped qtip-rounded qtip-shadow'
-    },
-    show: {
-        effect: function() {
-            $(this).slideDown();
-        }
-    },
-    hide: {
-        effect: function() {
-            $(this).slideUp();
-        }
-    }
-})
-
-
-
+        
+        teamMap[this.id] = ajaxObject;
+    });
+}
