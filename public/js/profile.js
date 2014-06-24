@@ -7,68 +7,60 @@ $('.team').qtip({ // Grab some elements to apply the tooltip to
         text: function(event, api) {
             var img = "<img src=" + "img/companies/" + $(this).attr("id") + ".png>";
             var myID = $(this).attr("id");
-            ajaxReq(api, myID, $(this));
-            return "Loading...";
+            return ajaxReq(api, myID, $(this)) || "Loading...";
         }
     },
     position: {
-        viewport: $(window),
-        my: 'left center',
-        at: 'center right'
+    	viewport: $(window),
+    	my: 'left center',
+    	at: 'center right'
     },
     style: {
-        classes: 'qtip-tipped qtip-rounded qtip-shadow'
+    	classes: 'qtip-tipped qtip-rounded qtip-shadow'
     },
     show: {
-        effect: function() {
-            $(this).slideDown();
-        }
+    	effect: function() {
+    		$(this).slideDown();
+    	}
     },
     hide: {
-        effect: function() {
-            $(this).slideUp();
-        }
+    	effect: function() {
+    		$(this).slideUp();
+    	}
     }
 });
 
 $( document ).ready( function() {
-    getUserData();
+	getUserData();
 });
 
 function ajaxReq (api, myID, curr) {
 	var data = (teamMap[curr.attr('id')]);
 	data = data.responseJSON
-	console.log(data);
-	console.log(data._id);
-                // This should probably be done serverside
-                /*for (var i = 0; i < data.length; i++) {
-                    if (data[i]._id == myID) {
-                        data = data[i];
-                        break;
-                    }
-                }*/
-                var userCompany = "Current Organization: " + data.company;
-                var userBio = data.bio;
-                var userName = data.person;
-                var userSkills = "Favorite Technologies: ";
-                var interests = "Interests: " + data.interests;
-                var imgPath = "img/companies/" + data.company.toLowerCase();
-                        
-                for(item in data.skills) {
-                    if( item == data.skills.length - 1) {
-                        userSkills += data.skills[item];
-                    }
-                    else {
-                        userSkills += data.skills[item] + ", ";                            }
-                }
-
-                var br = "<br>";
-                var image = "<img src=" + imgPath + ".png>";
-                var popupContent = image + br + userCompany + br + interests + br +userSkills+ br + br + userBio;
-                api.set({
-                    'content.text': popupContent,
-                    'content.title': userName,
-                });
+	
+	var userCompany = "Current Organization: " + data.company;
+	var userBio = data.bio;
+	var userName = data.person;
+	var userSkills = "Favorite Technologies: ";
+	var interests = "Interests: " + data.interests;
+	var imgPath = "img/companies/" + data.company.toLowerCase();
+	for(item in data.skills) {
+		if( item == data.skills.length - 1) {
+			userSkills += data.skills[item];
+		}
+		else {
+			userSkills += data.skills[item] + ", ";
+		}
+	}
+	
+	var br = "<br>";
+	var image = "<img src=" + imgPath + ".png>";
+	var popupContent = image + br + userCompany + br + interests + br +userSkills+ br + br + userBio;
+	api.set({
+		'content.text': popupContent,
+		'content.title': userName,
+	});
+    return popupContent;
 }
 
 function getUserData () {
