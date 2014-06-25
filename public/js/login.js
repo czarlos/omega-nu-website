@@ -9,3 +9,7 @@ $(window).scroll(function() {
 		$('#login').toggle();
 	}
 });
+
+$("#submit").click( function () {
+	
+});
