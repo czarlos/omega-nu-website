@@ -62,7 +62,7 @@ cd omega-nu-website/
 mkdir data/
 npm install
 ```
-#####Start the database (on Ubuntu, mongodb is alraedy running)#####
+#####Start the database (on Ubuntu, mongodb is already running)#####
 ```sh
 mongod --dbpath data/
 ```
