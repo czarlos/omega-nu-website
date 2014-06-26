@@ -43,6 +43,7 @@ function ajaxReq (api, myID, curr) {
 	var userName = data.person;
 	var userSkills = "Favorite Technologies: ";
 	var interests = "Interests: " + data.interests;
+	var concentrations = "Concentrations: " + data.concentrations;
 	var imgPath = "img/companies/" + data.company.toLowerCase();
 	for(item in data.skills) {
 		if( item == data.skills.length - 1) {
@@ -52,10 +53,9 @@ function ajaxReq (api, myID, curr) {
 			userSkills += data.skills[item] + ", ";
 		}
 	}
-	
 	var br = "<br>";
 	var image = "<img src=" + imgPath + ".png>";
-	var popupContent = image + br + userCompany + br + interests + br +userSkills+ br + br + userBio;
+	var popupContent = image + br + userCompany + br + interests + br + concentrations + br +userSkills + br + br + userBio;
 	api.set({
 		'content.text': popupContent,
 		'content.title': userName,
