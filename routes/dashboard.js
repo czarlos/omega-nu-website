@@ -12,7 +12,7 @@ router.post('/', function(req, res) {
 		_id: "",
 		person: user,
 		company: checkString("company", user, req.body.organization, "string"),
-		concentrations: checkString("concentrations", user, "", "string"),
+		concentrations: checkString("concentrations", user, req.body.concentrations, "array"),
 		skills: checkString("skills", user, req.body.skills, "array"),
 		bio: checkString("bio", user, req.body.bio, "string"),
 		interests: checkString("coding", user, "", "string")
