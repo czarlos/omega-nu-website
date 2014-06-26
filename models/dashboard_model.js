@@ -3,8 +3,8 @@ var mongoose = require('mongoose');
 var dashboardSchema = new mongoose.Schema({
 	person: String,
 	company: String,
-	concentrations: String,
-	skills: String,
+	concentrations: Array,
+	skills: Array,
 	bio: String,
 	interests: String
 });

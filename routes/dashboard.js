@@ -11,11 +11,11 @@ router.post('/', function(req, res) {
 	var dashboard = new Dashboard({
 		_id: "",
 		person: user,
-		company: checkValue("company", user, req.body.organization),
-		concentrations: checkValue("concentrations", user, ""),
-		skills: checkValue("skills", user, req.body.skills),
-		bio: checkValue("bio", user, req.body.bio),
-		interests: checkValue("coding", user, "")
+		company: checkString("company", user, req.body.organization, "string"),
+		concentrations: checkString("concentrations", user, "", "string"),
+		skills: checkString("skills", user, req.body.skills, "array"),
+		bio: checkString("bio", user, req.body.bio, "string"),
+		interests: checkString("coding", user, "", "string")
 	});
 	Dashboard.findOne({person:user}).update(dashboard.toObject(), function (err) {
 		if (err) {
@@ -39,13 +39,21 @@ function getValue (user, field) {
 	});
 }
 
-function checkValue (field, user, input) {
+function checkString (field, user, input, type) {
 	if (input !== null && input !== "") {
-		return input;
+		if (type === "string") {
+			return input;
+		}
+		if (type === "array") {
+			return input.split(",");
+		}
+		else {
+			return "Please write better code for this";
+		}
 	}
 	else {
 		getValue(user, field);
 	}
 }
-  
+
 module.exports = router;
