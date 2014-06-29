@@ -4,6 +4,9 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var https = require('https');
+var http = require('http');
+var fs = require('fs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -15,7 +18,7 @@ var login = require('./routes/login');
 var app = express();
 
 //listen on port 8888
-app.listen(8888);
+//app.listen(8888);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
@@ -80,5 +83,15 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+var options = {
+	key: fs.readFileSync('keys/key.pem'),
+	cert: fs.readFileSync('keys/key-cert.pem'),
+	requestCert: false,
+	requestUnauthorized: false
+}
+
+//http.createServer(app).listen(8888);
+https.createServer(options, app).listen(8443);
 
 module.exports = app;

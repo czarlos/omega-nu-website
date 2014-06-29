@@ -67,7 +67,7 @@ function getUserData () {
     $('.team').each(function () {
         var ajaxObject = 
             $.ajax( {
-                url: 'http://localhost:8888/users', // URL to the JSON file
+                url: '//localhost:8443/users', // URL to the JSON file
                 type: 'GET', // POST or GET
                 dataType: 'json', // Tell it we're retrieving JSON
                 data: {
