@@ -1,7 +1,6 @@
 $('#toggle-login').click(function(){
-
   $('#login').toggle();
-
+  $('.top-nav-collapse').css('height', '50px');
 });
 
 $(window).scroll(function() {
