@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var password_hash = require('password-hash');
 
 router.post('/', function(req, res) {
 	checkPassword(req, res);
@@ -8,16 +9,21 @@ router.post('/', function(req, res) {
 });
 
 function checkPassword (req, res) {
-	var user = req.body.user;
+	var un = req.body.user;
 	var pass = req.body.password;
-	var placeholder = user + " " + pass;
-	mongoose.model('users').find({person:placeholder}, function(err, user) {
-		if (user[0]==null || err) {
-			res.redirect('/');
+	
+	var hashed_password = password_hash.generate(pass);
+	
+	mongoose.model('users').findOne({username:un}, function(err, doc) {
+		console.log(doc);
+		/*if (un === u[0]['username'] && pass === u[0]['password']) {
+			console.dir(un);
+			res.render('dashboard', {name:req.body.user});
 		}
 		else {
-			res.render('dashboard', {name: req.body.user});
-		}
+			console.log(u);
+			res.redirect('/');
+		}*/
 	});
 }
 

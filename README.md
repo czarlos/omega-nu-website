@@ -75,6 +75,11 @@ gem install bson_ext
 ruby importJSON.rb
 ```
 
+#####Generate a self-signed SSL certificate (or just switch to http in app.js)#####
+```sh
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out key-cert.pem -days XXX
+```
+
 #####Fire it up#####
 ```sh
 npm start
