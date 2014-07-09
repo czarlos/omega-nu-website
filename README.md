@@ -6,7 +6,6 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Create basic login for team members
     - Users should be able to update their hover-over information in the database
   - Use GridFS to store user profile images
-  - Optimize MongoDB queries, and client side javascript
   - Add technologies images for user's profiles
   - Add Github language statistics for users
 
@@ -77,6 +76,7 @@ ruby importJSON.rb
 
 #####Generate a self-signed SSL certificate (or just switch to http in app.js)#####
 ```sh
+mkdir keys && cd keys/
 openssl req -x509 -newkey rsa:2048 -keyout key.pem -out key-cert.pem -days XXX
 ```
 
