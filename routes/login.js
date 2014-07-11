@@ -15,14 +15,15 @@ function checkPassword (req, res) {
 	var hashed_password = password_hash.generate(pass);
 	
 	mongoose.model('users').findOne({username:un}, function(err, doc) {
-		console.log(doc.person);
-		/*if (un === doc['username'] && pass === doc['password']) {
+		// We shouldn't need to do this	
+		var json_string = JSON.stringify(doc);
+		var subject = JSON.parse(json_string);
+		if (un === subject['username'] && pass === subject['password']) {
 			res.render('dashboard', {name:req.body.user});
 		}
 		else {
-			console.log(doc);
 			res.redirect('/');
-		}*/
+		}
 	});
 }
 
