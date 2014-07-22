@@ -1,6 +1,8 @@
-Omega Nu
+[Omega Nu][site]
 =========
 Welcome to the official repository for Omega Nu's website! Skip to the end to learn about contributing!
+
+[![Build Status](https://travis-ci.org/czarlos/omega-nu-website.svg?branch=master)](https://travis-ci.org/czarlos/omega-nu-website)
 
 ##Current Priorities##
   - Create basic login for team members
@@ -8,6 +10,7 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Use GridFS to store user profile images
   - Add technologies images for user's profiles
   - Add Github language statistics for users
+  - Make a cool logo for Omega Nu
 
 ##About##
 Check out [Omega Nu] [site].
@@ -35,8 +38,10 @@ We utilized some awesome technologies to build the site!
 * [jQuery] - Better than sliced bread.
 * [mongoDB] - A great NoSQL database!
 * [mongoose] - Provides object modeling for node.js
-* [Heroku] - PaaS
-* [MongoLab] - MongoDB as a service
+* [Heroku] - PaaS.
+* [MongoLab] - MongoDB as a service.
+* [Travis CI] - Continuous automated testing.
+* [qTip2] - Awesome tooltips!
 
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
@@ -97,3 +102,5 @@ npm start
 [Bootstrap]:http://twitter.github.com/bootstrap/
 [jQuery]:http://jquery.com
 [express.js]:http://expressjs.com
+[Travis CI]:https://travis-ci.org/
+[qTip2]:http://qtip2.com/
