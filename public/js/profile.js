@@ -37,7 +37,7 @@ $( document ).ready( function() {
 function ajaxReq (api, myID, curr) {
 	var data = (teamMap[curr.attr('id')]);
 	data = data.responseJSON
-	
+
 	var userCompany = "Current Organization: " + data.company;
 	var userBio = data.bio;
 	var userName = data.person;
@@ -65,16 +65,16 @@ function ajaxReq (api, myID, curr) {
 
 function getUserData () {
     $('.team').each(function () {
-        var ajaxObject = 
+        var ajaxObject =
             $.ajax( {
-                url: '//localhost:8443/users', // URL to the JSON file
+                url: '//localhost:8888/users', // URL to the JSON file
                 type: 'GET', // POST or GET
                 dataType: 'json', // Tell it we're retrieving JSON
                 data: {
                     id: this.id
                 },
             });
-        
+
         teamMap[this.id] = ajaxObject;
     });
 }
