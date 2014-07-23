@@ -8,6 +8,10 @@ router.post('/', function(req, res) {
 
 	var user = req.body.first_name + " " + req.body.last_name;
 
+    if (req.body.password_old !== null && req.body.password_old !== "") {
+        Dashboard.update({person:'Carlos Reyes'}, {password:req.body.password_new}, {multi: true}, function(err, numAffected){});
+    }
+
 	var dashboard = new Dashboard({
 		_id: "",
 		person: user,
@@ -15,8 +19,7 @@ router.post('/', function(req, res) {
 		concentrations: checkString("concentrations", user, req.body.concentrations, "array"),
 		skills: checkString("skills", user, req.body.skills, "array"),
 		bio: checkString("bio", user, req.body.bio, "string"),
-		interests: checkString("coding", user, "", "string"),
-        password: checkPassword("password", user, req.body.password_old)
+		interests: checkString("coding", user, "", "string")
 	});
 	Dashboard.findOne({person:user}).update(dashboard.toObject(), function (err) {
 		if (err) {
