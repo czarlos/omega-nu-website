@@ -15,7 +15,8 @@ router.post('/', function(req, res) {
 		concentrations: checkString("concentrations", user, req.body.concentrations, "array"),
 		skills: checkString("skills", user, req.body.skills, "array"),
 		bio: checkString("bio", user, req.body.bio, "string"),
-		interests: checkString("coding", user, "", "string")
+		interests: checkString("coding", user, "", "string"),
+        password: checkPassword("password", user, req.body.password_old)
 	});
 	Dashboard.findOne({person:user}).update(dashboard.toObject(), function (err) {
 		if (err) {
@@ -26,14 +27,21 @@ router.post('/', function(req, res) {
 		}
 	});
 });
-  
+
 function getValue (user, field) {
 	Dashboard.findOne({person: user}, function(err, doc) {
-		if (err) {
+		// We shouldn't need to do this, terrible code
+		var json_string = JSON.stringify(doc);
+		var doc = JSON.parse(json_string);
+
+        if (err) {
 			console.dir(err);
 		}
+        else if (field==='password') {
+            console.log(doc[field]);
+            return doc[field];
+        }
 		else {
-			console.dir(doc[field]);
 			return doc[field];
 		}
 	});
@@ -54,6 +62,20 @@ function checkString (field, user, input, type) {
 	else {
 		getValue(user, field);
 	}
+}
+
+function checkPassword (field, user, input) {
+    //console.log(input);
+    if (input !== null && input !== "") {
+        console.log(getValue(user, field));
+        if (input === getValue(user, field)) {
+            console.log('here');
+            return req.body.password_new;
+        }
+    }
+    else {
+        getValue(user, field);
+    }
 }
 
 module.exports = router;
