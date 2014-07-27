@@ -16,7 +16,6 @@ var dashboard = require('./routes/dashboard');
 var login = require('./routes/login');
 
 var app = express();
-
 //listen on port 8888
 //app.listen(8888);
 // view engine setup
@@ -30,6 +29,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.all("*", function(req, res) {
+    if (req.protocol=='http') {
+        res.redirect('https://www.omeganu.us');
+    }
+});
 
 app.use('/', routes);
 
@@ -90,6 +95,7 @@ var options = {
 	cert: fs.readFileSync('keys/ssl.crt')
 }
 
+http.createServer(app).listen(8080);
 https.createServer(options, app).listen(443);
 
 module.exports = app;
