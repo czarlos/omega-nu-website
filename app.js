@@ -18,6 +18,7 @@ var login = require('./routes/login');
 var app = express();
 //listen on port 8888
 //app.listen(8888);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
@@ -30,10 +31,11 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.all("*", function(req, res) {
-    if (req.protocol=='http') {
+app.use( function(req, res, next) {
+    if (!req.secure) {
         res.redirect('https://www.omeganu.us');
     }
+    next();
 });
 
 app.use('/', routes);
