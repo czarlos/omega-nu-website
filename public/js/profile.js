@@ -67,7 +67,7 @@ function getUserData () {
     $('.team').each(function () {
         var ajaxObject =
             $.ajax( {
-                url: '//152.3.53.64:443/users', // URL to the JSON file
+                url: '//www.omeganu.us/users', // URL to the JSON file
                 type: 'GET', // POST or GET
                 dataType: 'json', // Tell it we're retrieving JSON
                 data: {

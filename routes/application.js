@@ -2,7 +2,11 @@ var express = require('express');
 var router = express.Router();
 var application = require('../controllers/application.controller');
 
-var db = mongoose.connect("mongodb://localhost:27017/test");
+//var db = mongoose.connect("mongodb://localhost:27017/test");
+
+var mongoURI = process.env.MONGOLAB;
+var mongooseURI = uriUtil.formatMongoose(mongoURI);
+var db = mongoose.connect(mongooseURI);
 
 router.post('/', function(req, res) {
 	res.render('application', function(err, html){
