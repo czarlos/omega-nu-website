@@ -5,7 +5,7 @@ var projects_model = require('../models/projects_model.js');
 
 router.get('/', function(req, res) {
 	mongoose.model('projects').find(null, function(err, projects) {
-		console.dir(projects);
+		//console.dir(projects);
 		res.send(projects);
 	});
 });

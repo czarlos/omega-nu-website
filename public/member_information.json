@@ -5,7 +5,9 @@
 		"person" : "Carlos Reyes",
 		"interests": "Skiing",
 		"bio": "Carlos is an aspiring software engineer and avid skier; his main areas of interest are database technologies and GPU programming. In his free time he love to explore different ski areas.",
-		"skills": ["C++", "Ruby on Rails", "OpenCL"]
+		"skills": ["C++", "Ruby on Rails", "OpenCL"],
+        "username":"czarlos",
+        "password":"money"
 	},
 	"alex": {
 		"company" : "Facebook",
@@ -31,7 +33,6 @@
 		"bio" : "Sean is an upcoming engineer at Google.",
 		"skills" : ["Java", "C", "Python"]
 	},
-
 	"jonno": {
 		"company": "Microsoft",
 		"concentrations" : ["Computer Science"],
