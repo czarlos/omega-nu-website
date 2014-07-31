@@ -1,27 +1,29 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var bcrypt = require('bcrypt');
+var login = require('./login');
 Dashboard = require('../models/dashboard_model.js');
 
 router.post('/', function(req, res) {
 	res.render('dashboard', function(err, html) {});
 
-	var user = req.body.first_name + " " + req.body.last_name;
+	var user = login.username;
 
     if (req.body.password_old !== null && req.body.password_old !== "") {
-        Dashboard.update({person:'Carlos Reyes'}, {password:req.body.password_new}, {multi: true}, function(err, numAffected){});
+        Dashboard.update({username:user}, {password:req.body.password_new}, {multi: true}, function(err, numAffected){});
     }
 
 	var dashboard = new Dashboard({
 		_id: "",
-		person: user,
+		person: checkString("person", user, req.body.first_name+" "+req.body.last_name, "string"),
 		company: checkString("company", user, req.body.organization, "string"),
 		concentrations: checkString("concentrations", user, req.body.concentrations, "array"),
 		skills: checkString("skills", user, req.body.skills, "array"),
 		bio: checkString("bio", user, req.body.bio, "string"),
 		interests: checkString("coding", user, "", "string")
 	});
-	Dashboard.findOne({person:user}).update(dashboard.toObject(), function (err) {
+	Dashboard.findOne({username:user}).update(dashboard.toObject(), function (err) {
 		if (err) {
 			console.dir("err");
 		}
@@ -32,7 +34,7 @@ router.post('/', function(req, res) {
 });
 
 function getValue (user, field) {
-	Dashboard.findOne({person: user}, function(err, doc) {
+	Dashboard.findOne({username: user}, function(err, doc) {
 		// We shouldn't need to do this, terrible code
 		var json_string = JSON.stringify(doc);
 		var doc = JSON.parse(json_string);
@@ -41,7 +43,6 @@ function getValue (user, field) {
 			console.dir(err);
 		}
         else if (field==='password') {
-            console.log(doc[field]);
             return doc[field];
         }
 		else {
@@ -72,7 +73,6 @@ function checkPassword (field, user, input) {
     if (input !== null && input !== "") {
         console.log(getValue(user, field));
         if (input === getValue(user, field)) {
-            console.log('here');
             return req.body.password_new;
         }
     }

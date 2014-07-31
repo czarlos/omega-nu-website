@@ -3,13 +3,15 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
+var un = "";
+
 router.post('/', function(req, res) {
 	checkPassword(req, res);
 	//res.render('dashboard', {name: req.body.user});
 });
 
 function checkPassword (req, res) {
-	var un = req.body.user;
+	un = req.body.user;
 	var pass = req.body.password;
 
 	mongoose.model('users').findOne({username:un}, function(err, doc) {
@@ -28,4 +30,5 @@ function checkPassword (req, res) {
 	});
 }
 
+exports.username = un;
 module.exports = router;
