@@ -1,13 +1,15 @@
-Omega Nu
+[Omega Nu][site]
 =========
 Welcome to the official repository for Omega Nu's website! Skip to the end to learn about contributing!
 
-##Current Priorities##
-  - Create basic login for team members
-    - Users should be able to update their hover-over information in the database
+[![Build Status](https://travis-ci.org/czarlos/omega-nu-website.svg?branch=master)](https://travis-ci.org/czarlos/omega-nu-website)
+
+##Current Priorities and Status##
+  - We’ve moved from Heroku to a Duke Innovation Co-lab VM
   - Use GridFS to store user profile images
   - Add technologies images for user's profiles
   - Add Github language statistics for users
+  - Make a cool logo for Omega Nu
 
 ##About##
 Check out [Omega Nu] [site].
@@ -23,7 +25,7 @@ If you have any suggestions for improvements that we could make please feel free
 
 ##Version##
 
-1.0
+1.1
 
 ##Technologies##
 
@@ -35,8 +37,9 @@ We utilized some awesome technologies to build the site!
 * [jQuery] - Better than sliced bread.
 * [mongoDB] - A great NoSQL database!
 * [mongoose] - Provides object modeling for node.js
-* [Heroku] - PaaS
-* [MongoLab] - MongoDB as a service
+* [MongoLab] - MongoDB as a service.
+* [Travis CI] - Continuous automated testing.
+* [qTip2] - Awesome tooltips!
 
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
@@ -49,8 +52,7 @@ We utilized some awesome technologies to build the site!
   2. Take care when pushing to the release branch not to overwrite any of the heroku settings.
      - We'll add appropriate protective measures soon.
   3. Make sure not to include any sensitive information in the repo (passwords, etc).
-  4. If the [omeganu.us](http://omeganu.us) link doesn't work, try [omeganu.herokuapp.com](http://omeganu.herokuapp.com).
-  5. What happens on release, stays on release, do not pull from release if you are on another branch, only push to it.
+  4. What happens on release, stays on release, do not pull from release if you are on another branch, only push to it.
 
 ##Running Locally##
 
@@ -97,3 +99,5 @@ npm start
 [Bootstrap]:http://twitter.github.com/bootstrap/
 [jQuery]:http://jquery.com
 [express.js]:http://expressjs.com
+[Travis CI]:https://travis-ci.org/
+[qTip2]:http://qtip2.com/
