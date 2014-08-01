@@ -7,11 +7,11 @@ Dashboard = require('../models/dashboard_model.js');
 
 router.post('/', function(req, res) {
 	res.render('dashboard', function(err, html) {});
-
-	var user = login.username;
+    var user = "Carlos Reyes";
 
     if (req.body.password_old !== null && req.body.password_old !== "") {
-        Dashboard.update({username:user}, {password:req.body.password_new}, {multi: true}, function(err, numAffected){});
+        Dashboard.update({username:login.current_user}, {password:(bcrypt.hashSync(req.body.password_new, 8))}, {multi:true}, function(err, numAffected, raw){
+        });
     }
 
 	var dashboard = new Dashboard({
@@ -23,7 +23,7 @@ router.post('/', function(req, res) {
 		bio: checkString("bio", user, req.body.bio, "string"),
 		interests: checkString("coding", user, "", "string")
 	});
-	Dashboard.findOne({username:user}).update(dashboard.toObject(), function (err) {
+	Dashboard.findOne({username:login.current_user}).update(dashboard.toObject(), function (err) {
 		if (err) {
 			console.dir("err");
 		}
@@ -34,7 +34,7 @@ router.post('/', function(req, res) {
 });
 
 function getValue (user, field) {
-	Dashboard.findOne({username: user}, function(err, doc) {
+	Dashboard.findOne({username:login.current_user}, function(err, doc) {
 		// We shouldn't need to do this, terrible code
 		var json_string = JSON.stringify(doc);
 		var doc = JSON.parse(json_string);
@@ -69,7 +69,6 @@ function checkString (field, user, input, type) {
 }
 
 function checkPassword (field, user, input) {
-    //console.log(input);
     if (input !== null && input !== "") {
         console.log(getValue(user, field));
         if (input === getValue(user, field)) {

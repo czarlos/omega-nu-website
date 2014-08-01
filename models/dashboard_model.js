@@ -7,7 +7,8 @@ var dashboardSchema = new mongoose.Schema({
 	skills: Array,
 	bio: String,
 	interests: String,
-    password: String
+    password: String,
+    username: String
 });
 
 var Dashboard = mongoose.model('Users', dashboardSchema);
