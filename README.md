@@ -10,6 +10,7 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Add technologies images for user's profiles
   - Add Github language statistics for users
   - Make a cool logo for Omega Nu
+  - Set up Omega Nu email
 
 ##About##
 Check out [Omega Nu] [site].
@@ -25,7 +26,7 @@ If you have any suggestions for improvements that we could make please feel free
 
 ##Version##
 
-1.1
+1.2
 
 ##Technologies##
 
@@ -44,12 +45,13 @@ We utilized some awesome technologies to build the site!
 ##Contributing##
   1. If you're a current Omega Nu member send Carlos an email to be added as a contributor!
       - Commit anything you want, if you are making any major changes please make a new branch
+      - Forking your own copy is fine too!
   2. If you're not a member, considering applying, we'd love to have you on our team! 
       - Alternatively fork the repo and file a pull request.
 
 ##Guidelines##
   1. Please don't push to the 'static_site' branch, it preserves a non-webapp version of the site.
-  2. Take care when pushing to the release branch not to overwrite any of the heroku settings.
+  2. Take care when pushing to the release branch not to overwrite any of the VM specific settings.
      - We'll add appropriate protective measures soon.
   3. Make sure not to include any sensitive information in the repo (passwords, etc).
   4. What happens on release, stays on release, do not pull from release if you are on another branch, only push to it.
@@ -63,7 +65,7 @@ cd omega-nu-website/
 mkdir data/
 npm install
 ```
-#####Start the database (on Ubuntu, mongodb is already running)#####
+#####Start the database#####
 ```sh
 mongod --dbpath data/
 ```
@@ -90,10 +92,9 @@ npm start
 **Enjoy!**
 
 [MongoLab]: http://mongolab.com/
-[Heroku]: http://heroku.com/
 [mongoose]:http://mongoosejs.com/
 [mongoDB]:http://www.mongodb.org/
-[email]:info@omeganu.us
+[email]:cer26@duke.edu
 [site]:http://omeganu.us
 [node.js]:http://nodejs.org
 [Bootstrap]:http://twitter.github.com/bootstrap/
