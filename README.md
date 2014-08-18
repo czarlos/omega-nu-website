@@ -26,7 +26,7 @@ If you have any suggestions for improvements that we could make please feel free
 
 ##Version##
 
-1.2
+1.1
 
 ##Technologies##
 
