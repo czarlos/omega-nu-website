@@ -1,4 +1,4 @@
-# robots.txt for http://www.example.com/
+# robots.txt for http://www.omeganu.us/
 
 User-agent: *
 Disallow: /login
