@@ -83,14 +83,14 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
+/*
 var options = {
 	key: fs.readFileSync('keys/key.pem'),
 	cert: fs.readFileSync('keys/key-cert.pem'),
 	requestCert: false,
 	requestUnauthorized: false
 }
-
+*/
 http.createServer(app).listen(8888);
 //https.createServer(options, app).listen(8888);
 
