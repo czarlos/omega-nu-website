@@ -11,6 +11,7 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Add Github language statistics for users
   - Make a cool logo for Omega Nu
   - Set up Omega Nu email
+  - Add author tags for projects
 
 ##About##
 Check out [Omega Nu] [site].
