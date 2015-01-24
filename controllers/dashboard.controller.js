@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
-var login = require('./login');
+var login = require('../controllers/login.controller');
 var Dashboard = require('../models/dashboard.model');
 
 exports.dashboardFunction = function(req, res) {

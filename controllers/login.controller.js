@@ -9,7 +9,8 @@ exports.loginFunction = function(req, res) {
 function checkPassword (req, res) {
 	var un = req.body.user;
 	var pass = req.body.password;
-    router.current_user = un;
+    //router.current_user = un;
+    exports.current_user = un;
 	mongoose.model('users').findOne({username:un}, function(err, doc) {
 		// We shouldn't need to do this
 		var json_string = JSON.stringify(doc);

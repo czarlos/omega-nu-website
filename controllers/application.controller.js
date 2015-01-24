@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Applicant = require('../models/applicant_model.js');
+var Applicant = require('../models/applicant.model.js');
 var db = mongoose.connect("mongodb://localhost:27017/test");
 
 exports.newApplicant = function(req, res) {
