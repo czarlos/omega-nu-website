@@ -3,3 +3,4 @@ data/*
 npm-debug.log
 *.DS_Store
 keys/*
+.idea/*
