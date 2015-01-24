@@ -12,6 +12,7 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Make a cool logo for Omega Nu
   - Set up Omega Nu email
   - Add author tags for projects
+  - Add admin console for adding new users
 
 ##About##
 Check out [Omega Nu] [site].
