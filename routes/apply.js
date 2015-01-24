@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
+var apply = require('../controllers/apply.controller');
 
-router.get('/', function(req, res) {
-	res.render('apply');
-});
+router.get('/', apply.applyFunction);
 
 module.exports = router;
