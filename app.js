@@ -83,15 +83,18 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-/*
-var options = {
-	key: fs.readFileSync('keys/key.pem'),
-	cert: fs.readFileSync('keys/key-cert.pem'),
-	requestCert: false,
-	requestUnauthorized: false
+
+if (process.env.NODE_ENV === 'production') {
+    var options = {
+        key: fs.readFileSync('keys/key.pem'),
+        cert: fs.readFileSync('keys/key-cert.pem'),
+        requestCert: false,
+        requestUnauthorized: false
+    }
+    https.createServer(options, app).listen(8888);
 }
-*/
-http.createServer(app).listen(8888);
-//https.createServer(options, app).listen(8888);
+else {
+    http.createServer(app).listen(8888);
+}
 
 module.exports = app;
