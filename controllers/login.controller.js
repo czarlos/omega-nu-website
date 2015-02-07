@@ -19,10 +19,12 @@ function checkPassword (req, res) {
             res.redirect('/');
         }
 		else if (un === subject['username'] && bcrypt.compareSync(pass, subject['password'])) {
-			res.render('dashboard', {name:req.body.user});
+            console.log(subject);
+			res.render('dashboard', subject);
 		}
 		else {
 			res.redirect('/');
 		}
 	});
 };
+
