@@ -91,6 +91,12 @@ openssl req -x509 -newkey rsa:2048 -keyout key.pem -out key-cert.pem -days XXX
 npm start
 ```
 
+Alternatively use nodemon (npm install -g nodemon)
+#####Start using Nodemon#####
+```sh
+nodemon app.js
+```
+
 **Enjoy!**
 
 [MongoLab]: http://mongolab.com/
