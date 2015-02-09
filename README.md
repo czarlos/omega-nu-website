@@ -13,6 +13,7 @@ Welcome to the official repository for Omega Nu's website! Skip to the end to le
   - Set up Omega Nu email
   - Add author tags for projects
   - Add admin console for adding new users
+  - Set environment variables on VM that indicate production environment
 
 ##About##
 Check out [Omega Nu] [site].
@@ -57,6 +58,7 @@ We utilized some awesome technologies to build the site!
      - We'll add appropriate protective measures soon.
   3. Make sure not to include any sensitive information in the repo (passwords, etc).
   4. What happens on release, stays on release, do not pull from release if you are on another branch, only push to it.
+  5. Please rebase your branch before issuing a pull request.
 
 ##Running Locally##
 
